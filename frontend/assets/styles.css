@@ -1,0 +1,186 @@
+body {
+  font-family: 'Poppins', sans-serif;
+  color: #333;
+  background-color: #fff;
+  margin: 0;
+  padding-top: 110px; /* Espacio igual a la altura del navbar */
+  overflow-x: hidden;
+}
+
+/* --- Navbar fija --- */
+.fixed-nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1050;
+  background-color: #fff !important;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Navbar general */
+.navbar {
+  font-size: 0.95rem;
+}
+
+.navbar-brand strong {
+  font-size: 1.3rem;
+  color: #333;
+}
+
+.navbar-brand small {
+  color: #666;
+  font-size: 0.8rem;
+}
+
+.nav-link {
+  color: #444 !important;
+  font-weight: 500;
+}
+
+.nav-link:hover {
+  color: #F9A826 !important;
+}
+
+/* Hero */
+.hero {
+  background-color: #fff;
+  padding: 80px 0;
+}
+
+.hero .container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.hero-text {
+  flex: 1;
+  text-align: left;
+}
+
+.hero h1 {
+  font-size: 2.3rem;
+  color: #1f1f1f;
+}
+
+.hero p {
+  color: #555;
+  margin-bottom: 20px;
+}
+
+.btn-main {
+  background-color: #F9A826;
+  color: white;
+  border: none;
+  border-radius: 30px;
+  padding: 10px 25px;
+  font-weight: 500;
+  transition: 0.3s ease;
+}
+
+.btn-main:hover {
+  background-color: #ffb947;
+  color: white;
+}
+
+.hero-img img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Divider */
+.divider {
+  border: none;
+  border-top: 1px solid #787676;
+  margin: 2rem 0;
+}
+
+/* Info cards */
+.info-card h5 {
+  font-weight: 600;
+  color: #222;
+}
+
+.info-card p {
+  color: #333;
+}
+
+/* Iconos de las tarjetas */
+.info-icon {
+  width: 100px;
+  height: 100px;
+  object-fit: contain;
+  margin-bottom: 15px;
+}
+
+/* Animación de hover en tarjetas */
+.info-card {
+  transition: all 0.3s ease;
+  box-shadow: 0 0 0 rgba(0, 0, 0, 0);
+}
+
+.info-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Beneficios */
+.beneficios {
+  background-color: #fff;
+}
+
+.benefit-card {
+  background-color: #fff;
+  border: 2px solid #000;
+  border-radius: 15px;
+  transition: all 0.3s ease;
+  height: 100%;
+}
+
+.benefit-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  border-color: #F9A826;
+}
+
+.benefit-icon {
+  width: 70px;
+  height: 70px;
+  object-fit: contain;
+}
+
+/* CTA */
+#cta {
+  border-top: 1px solid #eee;
+}
+
+/* Footer */
+footer p {
+  font-size: 0.9rem;
+  color: #777;
+}
+
+/* Caja CTA */
+.cta-box {
+  background-color: #f5efec;
+  border-radius: 12px;
+}
+
+/* Botón principal (repetido por seguridad) */
+.btn-main {
+  background-color: #F9A826;
+  color: white;
+  border: none;
+  border-radius: 25px;
+  padding: 10px 25px;
+  font-weight: 500;
+  transition: 0.3s ease;
+}
+
+.btn-main:hover {
+  background-color: #ffb947;
+  color: white;
+}
+

@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <title>Ruta de Aprendizaje Inteligente</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+
+  <!-- Fuentes -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Bootstrap / iconos / estilos -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="./assets/navbar.css">
+  <link rel="stylesheet" href="./assets/ruta.css">
+
+  <!-- Ajuste para dejar espacio al navbar fixed-top -->
+  <style>
+    body {
+      padding-top: 100px; /* altura aproximada del navbar */
+      margin: 0;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAVBAR (igual que en mapa / noticias) -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm fixed-top">
+    <div class="container">
+      <a class="navbar-brand d-flex align-items-center" href="./index.html">
+        <img src="./assets/imagenes/imagen2.png" alt="Logo ADEL" height="80" class="me-2">
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+        <ul class="navbar-nav" id="navList">
+          <!-- elementos públicos -->
+          <li class="nav-item" id="navInicio"><a class="nav-link" href="./index.html">Inicio</a></li>
+          <li class="nav-item" id="navNoticias"><a class="nav-link" href="./noticias.html">Noticias</a></li>
+          <li class="nav-item" id="navMapa"><a class="nav-link" href="./mapa.html">Mapa</a></li>
+          <li class="nav-item" id="navRuta"><a class="nav-link" href="./ruta.html">Ruta</a></li>
+
+          <!-- login / registro (visibles si NO hay sesión) -->
+          <li class="nav-item" id="navLogin"><a class="nav-link" href="./inicio.html">Iniciar Sesión</a></li>
+          <li class="nav-item" id="navRegister"><a class="nav-link" href="./registro.html">Registrarse</a></li>
+
+          <!-- perfil / logout (visibles si HAY sesión) -->
+          <li class="nav-item dropdown d-none" id="navUserDropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="userDropdownLink" role="button"
+               data-bs-toggle="dropdown" aria-expanded="false">
+              <span id="navUserName">Usuario</span>
+            </a>
+            <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="userDropdownLink">
+              <li><a class="dropdown-item" id="navPerfil" href="./perfil.html">Perfil</a></li>
+              <li><a class="dropdown-item" id="navCerrar" href="#" role="button">Cerrar sesión</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- HEADER PROPIO DE RUTA -->
+  <header>
+    <div class="container">
+      <div class="logo">
+        <i class="fas fa-graduation-cap"></i>
+      </div>
+      <h1>Ruta de Aprendizaje Personalizada</h1>
+      <p class="subtitle">Crea tu camino educativo ideal basado en tus intereses y objetivos</p>
+    </div>
+  </header>
+
+  <div class="container">
+    <div class="form-container">
+      <div class="form-header">
+        <i class="fas fa-user-edit"></i>
+        <h2>Cuéntanos sobre ti</h2>
+      </div>
+
+      <form id="form">
+        <div class="form-grid">
+          <div class="form-group">
+            <label for="nombre">Nombre completo</label>
+            <div class="input-with-icon">
+              <i class="fas fa-user"></i>
+              <input type="text" id="nombre" name="nombre" placeholder="Tu nombre" required>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="edad">Edad</label>
+            <div class="input-with-icon">
+              <i class="fas fa-birthday-cake"></i>
+              <input type="number" id="edad" name="edad" min="10" max="120" placeholder="Tu edad" required>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="nivel">Nivel educativo</label>
+            <div class="input-with-icon">
+              <i class="fas fa-graduation-cap"></i>
+              <select id="nivel" name="nivel">
+                <option value="secundaria">Secundaria</option>
+                <option value="universitario">Universitario</option>
+                <option value="profesional">Profesional</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="tiempo">Tiempo disponible semanal</label>
+            <div class="input-with-icon">
+              <i class="fas fa-clock"></i>
+              <select id="tiempo" name="tiempo">
+                <option value="poco">1-3 horas</option>
+                <option value="medio">4-7 horas</option>
+                <option value="mucho">8+ horas</option>
+              </select>
+            </div>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="objetivo">Objetivo principal</label>
+          <div class="input-with-icon">
+            <i class="fas fa-bullseye"></i>
+            <textarea id="objetivo" name="objetivo" rows="2" placeholder="Ej: Aprender finanzas para mi emprendimiento"></textarea>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label>Selecciona tu nivel de interés en cada área</label>
+          <div class="interest-grid">
+            <div class="interest-card" data-area="marketing">
+              <div class="interest-icon">
+                <i class="fas fa-chart-line"></i>
+              </div>
+              <div class="interest-title">Marketing</div>
+              <select class="interest-select" name="marketing">
+                <option value="alto">Alto</option>
+                <option value="medio">Medio</option>
+                <option value="bajo">Bajo</option>
+              </select>
+            </div>
+
+            <div class="interest-card" data-area="finanzas">
+              <div class="interest-icon">
+                <i class="fas fa-money-bill-wave"></i>
+              </div>
+              <div class="interest-title">Finanzas</div>
+              <select class="interest-select" name="finanzas">
+                <option value="alto">Alto</option>
+                <option value="medio">Medio</option>
+                <option value="bajo">Bajo</option>
+              </select>
+            </div>
+
+            <div class="interest-card" data-area="contaduria">
+              <div class="interest-icon">
+                <i class="fas fa-calculator"></i>
+              </div>
+              <div class="interest-title">Contaduría</div>
+              <select class="interest-select" name="contaduria">
+                <option value="alto">Alto</option>
+                <option value="medio">Medio</option>
+                <option value="bajo">Bajo</option>
+              </select>
+            </div>
+
+            <div class="interest-card" data-area="negocios">
+              <div class="interest-icon">
+                <i class="fas fa-briefcase"></i>
+              </div>
+              <div class="interest-title">Negocios</div>
+              <select class="interest-select" name="negocios">
+                <option value="alto">Alto</option>
+                <option value="medio">Medio</option>
+                <option value="bajo">Bajo</option>
+              </select>
+            </div>
+          </div>
+        </div>
+
+        <button type="submit" class="btn btn-full">
+          <i class="fas fa-rocket"></i> Generar mi ruta personalizada
+        </button>
+      </form>
+    </div>
+
+    <div id="recorrido" aria-live="polite">
+      <!-- El contenido se generará dinámicamente aquí -->
+    </div>
+
+    <footer>
+      <p>Prototipo · Usa tu YouTube API Key. Si la búsqueda automática de cursos falla, mostramos recursos curados como respaldo.</p>
+    </footer>
+  </div>
+
+  <!-- Panel lateral para recursos -->
+  <div class="overlay" id="overlay"></div>
+  <div class="resources-sidebar" id="resources-sidebar">
+    <div class="sidebar-header">
+      <h3 class="sidebar-title" id="sidebar-title">Recursos de Aprendizaje</h3>
+      <button class="close-sidebar" id="close-sidebar">
+        <i class="fas fa-times"></i>
+      </button>
+    </div>
+    <div class="sidebar-content" id="sidebar-content">
+      <!-- El contenido se cargará dinámicamente aquí -->
+    </div>
+  </div>
+
+  <!-- JS -->
+  <script src="./assets/nav.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="./assets/ruta.js"></script>
+</body>
+</html>

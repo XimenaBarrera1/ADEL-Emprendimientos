@@ -1,0 +1,110 @@
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #fff;
+  color: #333;
+  margin: 0;
+  padding-top: 110px; /* Espacio para navbar fija */
+}
+
+/* --- Encabezado de la página --- */
+.news-header {
+  background-color: #FFD789;
+  padding: 60px 20px;
+}
+
+.news-header h1 {
+  font-weight: 700;
+  font-size: 2.2rem;
+  margin-bottom: 10px;
+}
+
+.news-header p {
+  color: #5a5a5a;
+  font-size: 1rem;
+}
+
+/* --- Barra de búsqueda y filtros --- */
+.filters {
+  margin-top: 20px;
+}
+
+.search-box {
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 5px 10px;
+}
+
+.search-icon {
+  margin-right: 8px;
+}
+
+.search-box input {
+  border: none;
+  outline: none;
+  width: 150px;
+}
+
+.filter-btn {
+  background-color: #f1eeec;
+  border-radius: 8px;
+  padding: 6px 20px;
+  font-weight: 500;
+  border: none;
+}
+
+.filter-btn:hover {
+  background-color: #e6e2df;
+}
+
+/* --- Tarjetas de noticias --- */
+.news-card {
+  background-color: #fff;
+  border: 1.5px solid #ccc;
+  border-radius: 10px;
+  padding: 15px 20px;
+  margin-bottom: 15px;
+}
+
+.news-card .news-image {
+  width: 50px;
+  height: 50px;
+  background-color: #b2f0c1;
+  border: 1px solid #777;
+  border-radius: 5px;
+}
+
+.news-card h5 {
+  margin: 0;
+}
+
+.ver-mas {
+  border-radius: 8px;
+  border: 1px solid #bbb;
+  background-color: #f1eeec;
+  font-size: 0.9rem;
+  transition: all 0.3s;
+}
+
+.ver-mas:hover {
+  background-color: #e6e2df;
+}
+
+/* --- Recursos útiles --- */
+.resources {
+  padding-bottom: 60px;
+}
+
+.resources h3 {
+  font-weight: 700;
+}
+
+.resources a {
+  color: #000;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.resources a:hover {
+  color: #F9A826;
+}

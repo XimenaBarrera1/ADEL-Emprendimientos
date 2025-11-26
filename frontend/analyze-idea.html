@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Registro de Idea de Negocio - ADEL</title>
+
+  <!-- Google Fonts + Bootstrap + tus estilos -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="./assets/styles2.css">
+  <link rel="stylesheet" href="./assets/navbar.css">
+
+  <!-- espacio para el navbar fijo -->
+  <style>
+    body.bg-light {
+      margin: 0;
+      padding-top: 100px; /* altura aprox del navbar */
+      font-family: "Poppins", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    }
+  </style>
+</head>
+<body class="bg-light">
+
+  <!-- Navbar unificado -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm fixed-top">
+    <div class="container">
+      <a class="navbar-brand d-flex align-items-center" href="./index.html">
+        <img src="./assets/imagenes/imagen2.png" alt="Logo ADEL" height="80" class="me-2">
+      </a>
+
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+        <ul class="navbar-nav" id="navList">
+          <!-- elementos públicos -->
+          <li class="nav-item" id="navInicio"><a class="nav-link" href="./index.html">Inicio</a></li>
+          <li class="nav-item" id="navNoticias"><a class="nav-link" href="./noticias.html">Noticias</a></li>
+          <li class="nav-item" id="navMapa"><a class="nav-link" href="./mapa.html">Mapa</a></li>
+          <li class="nav-item" id="navRuta"><a class="nav-link" href="./ruta.html">Ruta</a></li>
+
+          <!-- login / registro (visibles si NO hay sesión) -->
+          <li class="nav-item" id="navLogin"><a class="nav-link" href="./inicio.html">Iniciar Sesión</a></li>
+          <li class="nav-item" id="navRegister"><a class="nav-link" href="./registro.html">Registrarse</a></li>
+
+          <!-- perfil / logout (visibles si HAY sesión) -->
+          <li class="nav-item dropdown d-none" id="navUserDropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="userDropdownLink" role="button"
+               data-bs-toggle="dropdown" aria-expanded="false">
+              <span id="navUserName">Usuario</span>
+            </a>
+            <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="userDropdownLink">
+              <li><a class="dropdown-item" id="navPerfil" href="./perfil.html">Perfil</a></li>
+              <li><a class="dropdown-item" id="navCerrar" href="#" role="button">Cerrar sesión</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <main class="container">
+    <section class="card shadow-sm p-4 mb-5">
+      <h1 class="h4 mb-3">Registro de Idea de Negocio</h1>
+      <p class="text-muted">Completa lo esencial. Con esta información la IA te dará una asesoría práctica y breve.</p>
+
+      <form id="formIdea" class="row g-3 needs-validation" novalidate>
+        <div class="col-12">
+          <label class="form-label">Nombre provisional de la idea *</label>
+          <input id="ideaName" class="form-control" placeholder="Ej. Mini-Hamburguesas Express" required>
+        </div>
+
+        <div class="col-md-6">
+          <label class="form-label">Tipo de producto / especialidad</label>
+          <input id="productType" class="form-control" placeholder="Ej. Hamburguesas caseras, perros, arepas">
+        </div>
+
+        <div class="col-md-6">
+          <label class="form-label">Público objetivo (breve)</label>
+          <input id="targetAudience" class="form-control" placeholder="Ej. estudiantes, oficinistas, público general">
+        </div>
+
+        <div class="col-md-6">
+          <label class="form-label">Canal inicial previsto</label>
+          <input id="channel" class="form-control" placeholder="Ej. local, domicilios, redes">
+        </div>
+
+        <div class="col-md-6">
+          <label class="form-label">Capital inicial estimado (COP)</label>
+          <input id="initialCapital" type="number" class="form-control" placeholder="Ej. 15000000">
+        </div>
+
+        <div class="col-12">
+          <label class="form-label">Descripción breve de la idea</label>
+          <textarea id="description" class="form-control" rows="3" maxlength="300" placeholder="¿Qué venderías? ¿Horario? ¿Dónde piensas empezar?"></textarea>
+        </div>
+
+        <div class="col-12 d-flex gap-2">
+          <button id="sendBtn" class="btn btn-primary" type="submit">Registrar y analizar</button>
+          <button type="button" class="btn btn-outline-secondary" id="resetBtn">Limpiar</button>
+        </div>
+      </form>
+
+      <!-- Resultado de la IA -->
+      <div id="resultBox" class="mt-4" style="display:none"></div>
+
+    </section>
+  </main>
+
+  <!-- JS -->
+  <script src="./assets/nav.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- Lógica JS separada -->
+  <script src="./assets/analyze-idea.js"></script>
+</body>
+</html>

@@ -1,0 +1,107 @@
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #fff9e6; /* fondo beige suave */
+  margin: 0;
+  padding: 0;
+}
+
+.main {
+  margin-top: 130px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  min-height: 100vh;
+}
+
+.profile-card {
+  background-color: #fff3cc;
+  border-radius: 15px;
+  padding: 40px;
+  display: flex;
+  justify-content: space-between;
+  gap: 50px;
+  width: 80%;
+  max-width: 1100px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.profile-section,
+.business-section {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.profile-section h2,
+.business-section h2 {
+  text-align: center;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+.profile-avatar img {
+  width: 130px;
+  height: 130px;
+  border-radius: 50%;
+  margin-bottom: 20px;
+}
+
+.form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.form input,
+.form select,
+.form textarea {
+  width: 100%;
+  padding: 10px 12px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+}
+
+.form input:focus,
+.form select:focus,
+.form textarea:focus {
+  outline: none;
+  border-color: #f79e1b;
+  box-shadow: 0 0 4px rgba(247, 158, 27, 0.3);
+}
+
+.btn {
+  background-color: #f79e1b;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-weight: 600;
+  margin-top: 10px;
+  transition: 0.3s;
+  width: 100%;
+}
+
+.btn:hover {
+  background-color: #ffb347;
+}
+
+/* Ajuste de alineación de campos de negocio */
+.business-section form input[type="number"],
+.business-section form input[type="text"],
+.business-section form select,
+.business-section form textarea {
+  text-align: left;
+}
+
+/* Responsivo */
+@media (max-width: 900px) {
+  .profile-card {
+    flex-direction: column;
+    align-items: center;
+    width: 90%;
+  }
+}

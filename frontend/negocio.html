@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>¿Tienes un negocio? - ADEL</title>
+
+  <!-- Fuente Poppins -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Bootstrap + estilos navbar global -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="./assets/navbar.css">
+
+  <!-- Estilos personalizados de esta página -->
+  <link rel="stylesheet" href="./assets/styles2.css" />
+
+  <!-- pequeño ajuste para dejar espacio al navbar fixed-top -->
+  <style>
+    body {
+      margin: 0;
+      padding-top: 100px; /* altura aprox del navbar */
+      font-family: "Poppins", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAVBAR unificado -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm fixed-top">
+    <div class="container">
+      <a class="navbar-brand d-flex align-items-center" href="./index.html">
+        <img src="./assets/imagenes/imagen2.png" alt="Logo ADEL" height="80" class="me-2">
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+        <ul class="navbar-nav" id="navList">
+          <!-- elementos públicos -->
+          <li class="nav-item" id="navInicio"><a class="nav-link" href="./index.html">Inicio</a></li>
+          <li class="nav-item" id="navNoticias"><a class="nav-link" href="./noticias.html">Noticias</a></li>
+          <li class="nav-item" id="navMapa"><a class="nav-link" href="./mapa.html">Mapa</a></li>
+          <li class="nav-item" id="navRuta"><a class="nav-link" href="./ruta.html">Ruta</a></li>
+
+          <!-- login / registro (visibles si NO hay sesión) -->
+          <li class="nav-item" id="navLogin"><a class="nav-link" href="./inicio.html">Iniciar Sesión</a></li>
+          <li class="nav-item" id="navRegister"><a class="nav-link" href="./registro.html">Registrarse</a></li>
+
+          <!-- perfil / logout (visibles si HAY sesión) -->
+          <li class="nav-item dropdown d-none" id="navUserDropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="userDropdownLink" role="button"
+               data-bs-toggle="dropdown" aria-expanded="false">
+              <span id="navUserName">Usuario</span>
+            </a>
+            <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="userDropdownLink">
+              <li><a class="dropdown-item" id="navPerfil" href="./perfil.html">Perfil</a></li>
+              <li><a class="dropdown-item" id="navCerrar" href="#" role="button">Cerrar sesión</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- CONTENIDO PRINCIPAL -->
+  <main class="main">
+    <section class="login-card negocio-card" aria-label="Identificación de usuario">
+      <h1>¿Tienes un negocio?</h1>
+      <!-- Icono ilustrativo -->
+      <img src="./assets/negocio.png" alt="Icono negocio" class="icono-negocio" />
+      <p class="sub">Esto nos ayuda a darte<br>recomendaciones más útiles</p>
+
+      <div class="botones" role="group" aria-label="Opciones: tiene negocio">
+        <button id="btnYes" class="btn">Sí</button>
+        <button id="btnNo" class="btn btn-outline">No</button>
+      </div>
+    </section>
+  </main>
+
+  <!-- JS -->
+  <script src="./assets/nav.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+  <script>
+    // Redirecciones a las páginas del frontend
+    document.getElementById('btnYes').addEventListener('click', () => {
+      window.location.href = './analyze-business.html';
+    });
+    document.getElementById('btnNo').addEventListener('click', () => {
+      window.location.href = './analyze-idea.html';
+    });
+  </script>
+</body>
+</html>

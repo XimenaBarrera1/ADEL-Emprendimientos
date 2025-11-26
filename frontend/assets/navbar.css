@@ -1,0 +1,76 @@
+/* ===== NAVBAR GENERAL ===== */
+.adel-navbar {
+  font-family: 'Poppins', sans-serif;
+  font-size: 0.95rem;
+  background-color: #fff !important;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1050;
+}
+
+/* Espacio para que no tape el contenido */
+body {
+  padding-top: 100px;
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background-color: #FFF8DC; /* fondo amarillo claro del wireframe */
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+} 
+
+
+/* Logo y texto */
+.navbar-brand strong {
+  font-size: 1.3rem;
+  color: #333;
+}
+
+.navbar-brand small {
+  color: #666;
+  font-size: 0.8rem;
+}
+
+/* Enlaces */
+.nav-link {
+  color: #444 !important;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+  color: #F9A826 !important;
+}
+
+/* Botón "Registrarse" */
+.btn-registrarse {
+  background-color: #F9A826;
+  color: white !important;
+  border-radius: 30px;
+  padding: 6px 18px;
+  margin-left: 10px;
+  transition: all 0.3s ease;
+}
+
+.btn-registrarse:hover {
+  background-color: #ffb947;
+  color: white !important;
+}
+
+.btn {
+  background-color: #F7941D; /* color naranja tomado de la imagen */
+  color: white;
+  font-weight: 600;
+  border: none;
+  border-radius: 10px;
+  padding: 0.8rem 1rem;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.btn:hover {
+  background-color: #e27f00;
+}
